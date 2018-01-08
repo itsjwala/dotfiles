@@ -18,7 +18,7 @@
 	"material_theme_panel_separator": true,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_spaces_to_tabs": true,
 	"trim_trailing_white_space_on_save": true,

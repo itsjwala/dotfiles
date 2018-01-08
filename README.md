@@ -9,13 +9,13 @@
 ```shell
 sudo apt install zsh 
 ```
-* check if installed
-```shell
-echo $SHELL 
-```
 * set zsh as default shell
 ```shell
 chsh -s $(which zsh) 
+```
+* check if zsh is default shell
+```shell
+echo $SHELL 
 ```
 * install oh-my-zsh
 

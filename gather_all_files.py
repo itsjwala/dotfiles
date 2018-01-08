@@ -1,9 +1,15 @@
 import os
 from os import path
 
+print("working on {} directory ".format(os.getcwd()))
+print("continue [y/n] .. ")
+opt = input()
+if(opt[0:1].lower() == 'n'):
+    quit()
+
 print("running script ..")
 
-print("updating ./sublime files ..")
+print("copying sublime files ..")
 
 try:
     os.system("rm -rf sublime")
@@ -21,14 +27,16 @@ def surround_with_single_quotes(s):
 
 os.chdir("sublime")
 
-for f in os.listdir("/home/jigar/.config/sublime-text-3/Packages/User"):
-    abs_path = path.join("/home/jigar/.config/sublime-text-3/Packages/User", f)
+sublime_path = path.join(os.getenv("HOME"), ".config/sublime-text-3/Packages/User")
+
+for f in os.listdir(sublime_path):
+    abs_path = path.join(sublime_path, f)
     if(not path.isdir(abs_path) and (abs_path.endswith(".sublime-settings") or abs_path.endswith(".sublime-build"))):
         source = surround_with_single_quotes(abs_path)
         destination = surround_with_single_quotes(f)
         os.system("cp %s %s" % (source, destination))
 
-print("sublime files copying finished .. ")
+print("sublime files copying finished ")
 
 os.chdir(path.pardir)
 

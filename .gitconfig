@@ -1,0 +1,8 @@
+[alias]
+#git logs pretifier
+
+#git lg will show the current branch history.
+lg = log --graph --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+
+#git hist will show the whole branch history.
+hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short

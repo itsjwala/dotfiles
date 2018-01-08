@@ -38,4 +38,16 @@ os.system("cp ~/.zshrc .zshrc")
 
 print(".zshrc file copying complete")
 
+print("now copying .gitconfig ..")
+
+gitconfig_file = open("./.gitconfig", "w")
+
+with open("/home/jigar/.gitconfig", "r") as source:
+
+    for line in source:
+        gitconfig_file.write("\temail = abc@pqr.xyz\n" if "email" in line else line)
+
+gitconfig_file.close()
+print(".gitconfig file copying complete")
+
 print("Execution complete")

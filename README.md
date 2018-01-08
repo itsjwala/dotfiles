@@ -1,7 +1,7 @@
 # dotfiles
 
 ## sublime setup
-* copy all file of sublime folder into 
+* copy all file of sublime folder of the repo into 
   <code>~/.config/sublime-text-3/Packages/User</code>
   
 ## zsh setup
@@ -26,7 +26,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ## virtual environment setup for python
 > tutorial [link](https://www.sitepoint.com/virtual-environments-python-made-easy/) 
-* install virtaulenv wrapper 
+* install virtualenv wrapper 
 
   ```shell
   pip install virtualenvwrapper
@@ -48,4 +48,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 * install git
 * edit <code>~/.gitconfig</code> file with .gitconfig from repo
  
+ ### Note 
+  Added a python script which will grab all the sublime config files , .zshrc and .gitconfig files
  

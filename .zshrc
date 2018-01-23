@@ -107,3 +107,7 @@ alias say='fortune | cowsay'
 alias py=python
 alias py2=python2
 alias py3=python3
+
+function open () {
+  xdg-open "$@">/dev/null 2>&1
+}

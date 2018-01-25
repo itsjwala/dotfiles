@@ -20,7 +20,7 @@ echo $SHELL
 * install oh-my-zsh
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</code>
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ```
 * now copy .zshrc file from repo to <code>~/.zshrc</code>
 

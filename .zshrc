@@ -133,20 +133,20 @@ function openarch() {
 			continue
 		fi
 		echo "$extension"
-		if [ "$extension" == "tar" ]; then
+		if [ "$extension" = "tar" ]; then
 			tar -xvf $1
-		elif [ "$extension" == "gz" ]; then
+		elif [ "$extension" = "gz" ]; then
 			tar -xzvf $1
-		elif [ "$extension" == "b2z" ]; then
+		elif [ "$extension" = "b2z" ]; then
 			tar -xjvf $1
-		elif [ "$extension" == "zip" ]; then
+		elif [ "$extension" = "zip" ]; then
 			if [ "`command -v unzip`" = 0 ]; then
 				echo "Please install unzip by running sudo apt-get install unzip"
 				shift;
 				continue
 			fi
 			unzip $1
-		elif [ "$extension" == "rar" ]; then
+		elif [ "$extension" = "rar" ]; then
 			if [ "`command -v unrar`" = 0 ]; then
 				echo "Please install unrar by running sudo apt-get install unrar"
 				shift;

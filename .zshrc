@@ -112,8 +112,8 @@ function open () {
   xdg-open "$@">/dev/null 2>&1
 }
 
-function openarch() {
-	while (( "$#" )); do
+function openarch () {
+	while [ $# -gt 0 ]; do
 		if [ ! -f "$1" ]; then
 			echo "File Not Found: $1"
 			shift;

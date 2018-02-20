@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -94,25 +94,25 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-#my aliases
-alias hole='/dev/null 2>&1'
-alias f='nautilus'
-alias cls='clear'
-alias say='fortune | cowsay'
 
 #python virtaul environments wrapper
 # guide  here https://www.sitepoint.com/virtual-environments-python-made-easy/
 . /usr/local/bin/virtualenvwrapper.sh
 
+#my aliases
+alias hole='/dev/null 2>&1'
+alias cls='clear'
 alias py=python
 alias py2=python2
 alias py3=python3
 
-function open () {
-  xdg-open "$@">/dev/null 2>&1
-}
+# handy functions
 
-function openarch () {
+function say(){ fortune | cowsay }
+function f(){ nautilus "$@" > /dev/null 2>&1 }
+function open () {  xdg-open "$@">/dev/null 2>&1 }
+
+function unzip() {
 	while [ $# -gt 0 ]; do
 		if [ ! -f "$1" ]; then
 			echo "File Not Found: $1"
@@ -137,7 +137,7 @@ function openarch () {
 			tar -xvf $1
 		elif [ "$extension" = "gz" ]; then
 			tar -xzvf $1
-		elif [ "$extension" = "b2z" ]; then
+		elif [ "$extension" = "bz2" ]; then
 			tar -xjvf $1
 		elif [ "$extension" = "zip" ]; then
 			if [ "`command -v unzip`" = 0 ]; then
@@ -145,7 +145,7 @@ function openarch () {
 				shift;
 				continue
 			fi
-			unzip $1
+			command unzip $1
 		elif [ "$extension" = "rar" ]; then
 			if [ "`command -v unrar`" = 0 ]; then
 				echo "Please install unrar by running sudo apt-get install unrar"

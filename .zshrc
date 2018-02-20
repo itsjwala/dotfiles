@@ -111,3 +111,51 @@ alias py3=python3
 function open () {
   xdg-open "$@">/dev/null 2>&1
 }
+
+function openarch() {
+	while (( "$#" )); do
+		if [ ! -f "$1" ]; then
+			echo "File Not Found: $1"
+			shift;
+			continue
+		fi
+		echo "File Found: $1"
+		if [ ! -r "$1" ]; then
+			echo "File Not Readable: $1"
+			shift;
+			continue
+		fi
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		if [ "`command -v tar`" = 0 ]; then
+			echo "Please install tar by running sudo apt-get install tar"
+			shift;
+			continue
+		fi
+		echo "$extension"
+		if [ "$extension" = "tar" ]; then
+			tar -xvf $1
+		elif [ "$extension" = "gz" ]; then
+			tar -xzvf $1
+		elif [ "$extension" = "b2z" ]; then
+			tar -xjvf $1
+		elif [ "$extension" = "zip" ]; then
+			if [ "`command -v unzip`" = 0 ]; then
+				echo "Please install unzip by running sudo apt-get install unzip"
+				shift;
+				continue
+			fi
+			unzip $1
+		elif [ "$extension" = "rar" ]; then
+			if [ "`command -v unrar`" = 0 ]; then
+				echo "Please install unrar by running sudo apt-get install unrar"
+				shift;
+				continue
+			fi
+			unrar x -r $1
+		else
+			echo "Unidentified extension: $extension in file $1"
+		fi
+		shift;
+	done
+}

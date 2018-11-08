@@ -1,3 +1,6 @@
+# Disabling warning when running as root
+ZSH_DISABLE_COMPFIX=true
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -7,7 +10,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="risto"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -102,9 +105,6 @@ source $ZSH/oh-my-zsh.sh
 #my aliases
 alias hole='/dev/null 2>&1'
 alias cls='clear'
-alias py=python
-alias py2=python2
-alias py3=python3
 
 # handy functions
 
@@ -159,3 +159,4 @@ function unzip() {
 		shift;
 	done
 }
+

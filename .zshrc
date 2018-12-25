@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 
 #python virtaul environments wrapper
 # guide  here https://www.sitepoint.com/virtual-environments-python-made-easy/
-. /usr/local/bin/virtualenvwrapper.sh
+#. /usr/local/bin/virtualenvwrapper.sh
 
 #my aliases
 alias hole='/dev/null 2>&1'

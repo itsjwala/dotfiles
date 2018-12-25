@@ -1,9 +1,9 @@
 {
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"file_exclude_patterns":
 	[
 	],
-	"font_size": 9,
+	"font_size": 8,
 	"ignored_packages":
 	[
 		"Anaconda",
@@ -20,7 +20,7 @@
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
 	"tab_size": 4,
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_spaces_to_tabs": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true

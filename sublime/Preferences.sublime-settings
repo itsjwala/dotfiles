@@ -1,12 +1,11 @@
 {
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
 	"file_exclude_patterns":
 	[
 	],
-	"font_size": 8,
+	"font_size": 11,
 	"ignored_packages":
 	[
-		"Anaconda",
 		"Vintage"
 	],
 	"material_theme_accent_indigo": true,
@@ -20,7 +19,7 @@
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
 	"tab_size": 4,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_spaces_to_tabs": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true

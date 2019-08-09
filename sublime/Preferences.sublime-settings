@@ -1,9 +1,9 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
+	"color_scheme": "Packages/Color Scheme - Default/Celeste.sublime-color-scheme",
 	"file_exclude_patterns":
 	[
 	],
-	"font_size": 11,
+	"font_size": 8,
 	"ignored_packages":
 	[
 		"Vintage"

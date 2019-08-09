@@ -10,7 +10,7 @@ ZSH_DISABLE_COMPFIX=true
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="risto"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -109,7 +109,7 @@ alias cls='clear'
 # handy functions
 
 function say(){ fortune | cowsay }
-function f(){ nautilus "$@" > /dev/null 2>&1 }
+
 function open () {  xdg-open "$@">/dev/null 2>&1 }
 
 function unzip() {
@@ -171,3 +171,7 @@ export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:$HOME/.local/bin
 
 
+#exports for gradle
+
+
+export PATH=$PATH:/opt/gradle/gradle-5.5.1/bin

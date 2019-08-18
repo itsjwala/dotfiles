@@ -1,0 +1,11 @@
+automatic:-
+
+https://github.com/C2N14/AutomaThemely
+
+theme:-
+https://github.com/B00merang-Project/macOS
+
+https://github.com/B00merang-Project/macOS-Dark
+
+icons:-
+https://github.com/keeferrourke/la-capitaine-icon-theme

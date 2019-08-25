@@ -3,7 +3,10 @@
 ## sublime setup
 * copy all file of sublime folder of the repo into 
   <code>~/.config/sublime-text-3/Packages/User</code>
-  
+## vscode setup
+* copy all file of vscode folder of the repo into
+`~/.config/Code/User`
+
 ## zsh setup
 * install zsh 
 ```shell

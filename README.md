@@ -27,6 +27,21 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
   ```
 * now copy .zshrc file from repo to <code>~/.zshrc</code>
 
+## npm global package in user directory
+
+###### 1. Create a directory for global packages
+
+```sh
+mkdir "${HOME}/.npm-packages"
+```
+
+###### 2. Tell `npm` where to store globally installed packages
+
+```sh
+npm config set prefix "${HOME}/.npm-packages"
+```
+rest of the setup is in [.zshrc](https://github.com/jigarWala/dotfiles/blob/master/.zshrc) so copy that too
+
 ## virtual environment setup for python
 > Using [pipenv](https://github.com/pypa/pipenv) from now.
 

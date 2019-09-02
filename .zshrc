@@ -10,7 +10,7 @@ ZSH_DISABLE_COMPFIX=true
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="risto"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -161,17 +161,26 @@ function unzip() {
 }
 
 
-#exports for yarn/global/node_modules/.bin
 
-export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
+#exports for yarn global modules
+YARN_PATH="$HOME/.config/yarn/global"
 
+# exports for npm global modules
+NPM_PACKAGES="$HOME/.npm-packages"
+
+export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+
+# make yarn and npm global packages available for node cli environment
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$YARN_PATH/node_modules"
 
 #exports for pip binaries
-
 export PATH=$PATH:$HOME/.local/bin
 
 
 #exports for gradle
-
-
 export PATH=$PATH:/opt/gradle/gradle-5.5.1/bin

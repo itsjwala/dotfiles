@@ -184,3 +184,7 @@ export PATH=$PATH:$HOME/.local/bin
 
 #exports for gradle
 export PATH=$PATH:/opt/gradle/gradle-5.5.1/bin
+
+
+# exports for Go
+export PATH=$PATH:/opt/go1.13.linux-amd64/go/bin

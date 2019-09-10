@@ -162,6 +162,7 @@ function unzip() {
 
 function set_gopath(){
 	export GOPATH=$(pwd)
+	export GOBIN=$(pwd)/bin
 }
 
 #exports for yarn global modules

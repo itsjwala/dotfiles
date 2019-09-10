@@ -160,7 +160,9 @@ function unzip() {
 	done
 }
 
-
+function set_gopath(){
+	export GOPATH=$(pwd)
+}
 
 #exports for yarn global modules
 YARN_PATH="$HOME/.config/yarn/global"
